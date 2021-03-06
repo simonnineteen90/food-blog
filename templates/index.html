@@ -3,18 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>HTML Forms</title>
+    <link rel="stylesheet" href="static/css/styles.css">
 </head>
 <body>
     <div class="form-test">
-        <h1>Hello Forms!</h1>
-        <form action="" method="post">
-            <label for="username">Username</label>
-            <input type="text" placeholder="User12345">
+        <h1>Contact form</h1>
+        <form class="contact_form" action="{{ url_for('receive_data')}}" method="post" id="contact_form">
+            <label for="name">Name</label>
+            <input type="text" placeholder="Name" name="contact_name">
 
-            <label for="password">Password</label>
-            <input type="text" placeholder="password1">
+            <label for="email">Email</label>
+            <input type="text" placeholder="Email" name="contact_email">
 
-            <input type="submit" value="Submit">
+            <label for="message">Message</label>
+            <textarea name="contact_message" form="contact_form" cols="30" rows="10"></textarea>
+
+            <input type="submit" value="Send">
         </form>
 
     </div>
