@@ -4,25 +4,27 @@
     <meta charset="UTF-8">
     <title>HTML Forms</title>
     <link rel="stylesheet" href="static/css/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="form-test">
 
         {% if msg_sent: %}
-            <h1>Message Sent!</h1>
+            <h1 class="headings">Message Sent!</h1>
         {% else: %}
-            <h1>Contact form</h1>
+            <h1 class="headings">Contact form</h1>
         {% endif %}
 
         <form class="contact_form" action="{{ url_for('contact')}}" method="post" id="contact_form">
             <label for="name">Name</label>
-            <input type="text" placeholder="Name" name="contact_name">
+            <input class="border_reset input_text" type="text" placeholder="Han Solo" name="contact_name">
 
             <label for="email">Email</label>
-            <input type="text" placeholder="Email" name="contact_email">
+            <input type="text" placeholder="solo@thefalcon.gal" name="contact_email">
 
             <label for="message">Message</label>
-            <textarea name="contact_message" form="contact_form" cols="30" rows="10"></textarea>
+            <textarea name="contact_message" form="contact_form" placeholder="I have a bad feeling about this" cols="30" rows="10"></textarea>
 
             <input type="submit" value="Send">
         </form>

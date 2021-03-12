@@ -1,6 +1,13 @@
 html {
-    color: red;
+    font-family: 'Lato', sans-serif;
+    color: #00171F;
+    
 
+}
+
+.headings {
+    font-weight:700;
+    
 }
 
 .form-test {
@@ -10,13 +17,36 @@ html {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
-
-
 }
 
 .contact_form {
     display:flex;
     flex-direction: column;
+    width: 60%;
+    
 
+}
+
+form label {
+    padding-bottom: 10px;
+    font-weight: 700;
+}
+
+form input {
+    margin-bottom: 20px;
+    font-family: 'Lato', sans-serif;
+    height: 30px;
+}
+
+.input_text {
+    border-bottom: red;
+}
+
+.border_reset {
+    border:none;
+
+}
+
+.border_reset :focus {
+    border: none;
 }
