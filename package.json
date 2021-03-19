@@ -1,0 +1,24 @@
+{
+  "name": "html-forms",
+  "description": "testing out serving up html forms with flask and sass",
+  "version": "1.0.0",
+  "main": "index.html",
+  "devDependencies": {
+    "sass": "^1.32.8"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+     "compile:sass": "sass static/sass/main.scss static/css/styles.css --watch"  
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simonnineteen90/html-forms.git"
+  },
+  "author": "Simon Dunn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/simonnineteen90/html-forms/issues"
+  },
+  "homepage": "https://github.com/simonnineteen90/html-forms#readme"
+}
