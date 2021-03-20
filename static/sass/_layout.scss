@@ -1,0 +1,38 @@
+.container {
+max-width: 120rem;
+margin:0 auto;
+background-color: var(--color-light-gray);
+
+min-height: 100vh;
+
+}
+
+
+
+.navigation {
+    height: 7rem;
+    background-color: var(--color-white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.hero {
+    height: 50rem;
+    background-color: var(--color-dark-gray);
+
+
+}
+
+.main-content {
+    height: 100rem;
+    background-color: var(--color-light-gray);
+
+}
+
+.footer{
+    height: 7rem;
+    background-color: var(--color-white);
+}
+

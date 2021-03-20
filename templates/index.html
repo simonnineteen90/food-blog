@@ -11,46 +11,51 @@
 
 
 <body>
-        <nav>
-            <div class="nav_container">
-                    <div class="nav-home">
-                            Home
-                        </div>
+    <div class="contact-container">
+            <!-- <nav>
+                    <div class="nav_container">
+                            <div class="nav-home">
+                                    Home
+                                </div>
+                    
+                                <ul>
+                                    <li>Menu 1</li>
+                                    <li>Menu 2</li>
+                                    <li>Menu 3</li>
+                                    <li>Menu 4</li>
+                                        
+                                </ul>
+                    </div>
+                   
+                </nav> -->
+        
             
-                        <ul>
-                            <li>Menu 1</li>
-                            <li>Menu 2</li>
-                            <li>Menu 3</li>
-                            <li>Menu 4</li>
-                                
-                        </ul>
+            <div class="form-test">
+        
+                {% if msg_sent: %}
+                    <h1 class="headings">Message Sent!</h1>
+                {% else: %}
+                    <h1 class="headings">Contact form</h1>
+                {% endif %}
+        
+                <form class="contact_form" action="{{ url_for('contact')}}" method="post" id="contact_form">
+                    <label for="name">Name</label>
+                    <input type="text" placeholder="Han Solo" name="contact_name">
+        
+                    <label for="email">Email</label>
+                    <input type="text" placeholder="solo@thefalcon.gal" name="contact_email">
+        
+                    <label for="message">Message</label>
+                    <textarea name="contact_message" form="contact_form" placeholder="I have a bad feeling about this" cols="30" rows="10"></textarea>
+        
+                    <input type="submit" value="Send">
+                </form>
+        
             </div>
-           
-        </nav>
-
-    
-    <div class="form-test">
-
-        {% if msg_sent: %}
-            <h1 class="headings">Message Sent!</h1>
-        {% else: %}
-            <h1 class="headings">Contact form</h1>
-        {% endif %}
-
-        <form class="contact_form" action="{{ url_for('contact')}}" method="post" id="contact_form">
-            <label for="name">Name</label>
-            <input type="text" placeholder="Han Solo" name="contact_name">
-
-            <label for="email">Email</label>
-            <input type="text" placeholder="solo@thefalcon.gal" name="contact_email">
-
-            <label for="message">Message</label>
-            <textarea name="contact_message" form="contact_form" placeholder="I have a bad feeling about this" cols="30" rows="10"></textarea>
-
-            <input type="submit" value="Send">
-        </form>
 
     </div>
+
+        
 
 
 </body>

@@ -1,6 +1,16 @@
 
 // FORM
 
+.contact-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: rgb(9, 0, 49);
+    
+}
+
 .form-test {
     width: 600px;
     display:flex;
@@ -18,8 +28,6 @@
     display:flex;
     flex-direction: column;
     width: 100%;
-    
-
 }
 
 input[type=text] {
@@ -34,7 +42,6 @@ input:focus {
    
 }
 
-
 button, input, select, textarea, label {
     font-family: inherit;
     font-size: 100%;
@@ -48,9 +55,11 @@ label {
 }
 
 
+
+// *************
 // NAV version 1
 
-nav {
+/* nav {
     width: 100%;
     height: 60px;
     background-color: #FDFDFD;
@@ -97,4 +106,21 @@ nav ul li {
 
 .nav-home {
     font-weight: 700;
+} */
+
+// *************
+// NAV version 2
+
+.navigation {
+    font-size: 1.6rem;
+    
+    &__home {
+
+    }
+
+    &__links {
+        display: flex;
+        list-style: none;
+    }
+
 }

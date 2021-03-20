@@ -19,6 +19,10 @@ def hello_world():
     return render_template('index.html')
 
 
+@app.route('/flex-practice')
+def flex_practice():
+    return render_template('flex-practice.html')
+
 @app.route('/contact', methods=["POST"])
 def contact():
     if request.method == "POST":
