@@ -1,0 +1,100 @@
+
+// FORM
+
+.form-test {
+    width: 600px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    background-color: #FDFDFD;
+    padding: 25px;
+
+    font-size: 1.6rem;
+}
+
+.contact_form {
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    
+
+}
+
+input[type=text] {
+    border: none;
+    border-bottom: 1px solid #00171F;
+    background-color: inherit;
+}
+
+input:focus {
+    outline: none;
+    border-bottom: solid 4px red;
+   
+}
+
+
+button, input, select, textarea, label {
+    font-family: inherit;
+    font-size: 100%;
+    padding: 5px;
+  }
+
+
+label {
+    font-weight:700;
+    margin: 20px 0 10px 0;
+}
+
+
+// NAV version 1
+
+nav {
+    width: 100%;
+    height: 60px;
+    background-color: #FDFDFD;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1.6rem;
+
+    
+}
+
+.nav_container {
+    width: 1000px;
+    height: inherit;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    
+    height: 100%;
+    padding:0;
+    list-style: none;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+
+}
+
+nav ul li {
+    
+    font-weight: 700;
+    margin: 0 10px;
+}
+
+.nav-home {
+    font-weight: 700;
+}
