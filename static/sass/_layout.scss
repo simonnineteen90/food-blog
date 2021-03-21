@@ -21,7 +21,14 @@ min-height: 100vh;
 .hero {
     height: 50rem;
     background-color: var(--color-dark-gray);
+    display: flex;
+    justify-content: flex-end;
+    background-color: var(--color-white);
+   
+    //mask-image: linear-gradient(90deg rgba(0, 0, 0, 1.0), transparent);
+    
 
+    // height: 500px; 
 
 }
 

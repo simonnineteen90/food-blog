@@ -108,19 +108,72 @@ nav ul li {
     font-weight: 700;
 } */
 
+
+
 // *************
 // NAV version 2
 
 .navigation {
     font-size: 1.6rem;
-    
-    &__home {
+    font-weight: 700;
 
+    &__home {
+        margin-left: 4rem;
     }
 
     &__links {
         display: flex;
         list-style: none;
+        padding:0;
+        margin-right: 4rem;
+
+        & li {
+            margin: 1rem;
+        }
+
+        & a {
+            text-decoration: none;
+            color: inherit;
+    
+            &:hover {
+                color: orangered;
+                transition: all .2s;
+          
+            }
+        }
     }
 
+}
+
+
+
+
+// *************
+// Hero
+
+.hero {
+    &__image {
+        flex:0 0 50%;
+        background: orangered;  
+        background: url(/static/images/hero-image.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        clip-path: polygon(0 0, 89% 0, 80% 100%, 0% 100%);   
+        
+    }
+
+    &__content {
+        flex: 0 0 50%;
+        padding: 7rem;
+        font-size: 1.6rem;
+
+        & a {
+            text-decoration: none;
+            color: var(--color-primary);
+            font-weight: 700;
+
+        }
+        
+    }
 }
