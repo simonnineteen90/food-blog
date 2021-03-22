@@ -35,6 +35,10 @@ min-height: 100vh;
 .main-content {
     height: 100rem;
     background-color: var(--color-light-gray);
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: space-around;
 
 }
 

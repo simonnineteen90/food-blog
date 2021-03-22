@@ -177,3 +177,25 @@ nav ul li {
         
     }
 }
+
+
+.main-content {
+
+
+    &__card {
+        margin: 0 4rem;
+        width: 30rem;
+        height: 40rem;
+        background-color: #FDFDFD;
+        font-size: 1.6rem;
+        
+        &--image {
+            height: 18rem;
+            background-color: orangered;
+        }
+
+        &--text {
+            padding: 0 2rem;
+        }
+    }
+}
