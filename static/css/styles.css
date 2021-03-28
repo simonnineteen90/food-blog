@@ -39,8 +39,8 @@ body {
 }
 
 .navigation {
-  height: 7rem;
-  background-color: var(--color-white);
+  min-height: 7rem;
+  background-color: var(--color-light-gray);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -55,8 +55,7 @@ body {
 }
 
 .main-content {
-  height: 100rem;
-  background-color: var(--color-light-gray);
+  background-color: var(--color-white);
   display: flex;
   flex-wrap: wrap;
   align-content: space-around;
@@ -64,8 +63,11 @@ body {
 }
 
 .footer {
-  height: 7rem;
-  background-color: var(--color-white);
+  min-height: 7rem;
+  background-color: var(--color-light-gray);
+  display: flex;
+  justify-content: center;
+  font-size: 1.4rem;
 }
 
 .contact-container {
@@ -209,8 +211,8 @@ nav ul li {
 }
 
 .main-content__card {
-  margin: 0 4rem;
-  width: 30rem;
+  flex: 1 1 30rem;
+  margin: 4rem;
   height: 40rem;
   background-color: #FDFDFD;
   font-size: 1.6rem;
@@ -218,6 +220,7 @@ nav ul li {
 .main-content__card--image {
   height: 18rem;
   background-color: orangered;
+  background-image: url(/static/images/hero-image.jpg);
 }
 .main-content__card--text {
   padding: 0 2rem;

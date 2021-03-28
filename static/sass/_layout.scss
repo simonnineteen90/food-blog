@@ -10,8 +10,8 @@ min-height: 100vh;
 
 
 .navigation {
-    height: 7rem;
-    background-color: var(--color-white);
+    min-height: 7rem;
+    background-color: var(--color-light-gray);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -33,8 +33,8 @@ min-height: 100vh;
 }
 
 .main-content {
-    height: 100rem;
-    background-color: var(--color-light-gray);
+    // height: 100rem;
+    background-color: var(--color-white);
     display: flex;
     flex-wrap: wrap;
     align-content: space-around;
@@ -43,7 +43,10 @@ min-height: 100vh;
 }
 
 .footer{
-    height: 7rem;
-    background-color: var(--color-white);
+    min-height: 7rem;
+    background-color: var(--color-light-gray);;
+    display: flex;
+    justify-content: center;
+    font-size: 1.4rem;
 }
 

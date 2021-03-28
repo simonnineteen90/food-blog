@@ -183,8 +183,9 @@ nav ul li {
 
 
     &__card {
-        margin: 0 4rem;
-        width: 30rem;
+        flex: 1 1 30rem; 
+        margin: 4rem;
+        // min-width: 30rem;
         height: 40rem;
         background-color: #FDFDFD;
         font-size: 1.6rem;
@@ -192,6 +193,7 @@ nav ul li {
         &--image {
             height: 18rem;
             background-color: orangered;
+            background-image: url(/static/images/hero-image.jpg);
         }
 
         &--text {
