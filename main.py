@@ -14,24 +14,24 @@ def send_email(name, email, message):
 
 app = Flask(__name__)
 
+# @app.route('/contact')
+# def contact():
+#     return render_template('index.html')
+
+
 @app.route('/')
-def hello_world():
+def index():
     return render_template('index.html')
 
-
-@app.route('/flex-practice')
-def flex_practice():
-    return render_template('flex-practice.html')
-
-@app.route('/contact', methods=["POST"])
+@app.route('/contact', methods=["POST", "GET"])
 def contact():
     if request.method == "POST":
         name = request.form["contact_name"]
         email = request.form["contact_email"]
         message = request.form["contact_message"]
         send_email(name, email, message)
-        return render_template('index.html', msg_sent=True)
-    return render_template('index.html', msg_sent=False)
+        return render_template('contact.html', msg_sent=True)
+    return render_template('contact.html', msg_sent=False)
 
 
 if __name__ == "__main__":
