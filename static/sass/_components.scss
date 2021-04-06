@@ -58,65 +58,32 @@ label {
 
 
 // *************
-// NAV version 1
-
-/* nav {
-    width: 100%;
-    height: 60px;
-    background-color: #FDFDFD;
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    font-size: 1.6rem;
-
-    
-}
-
-.nav_container {
-    width: 1000px;
-    height: inherit;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-nav ul {
-    
-    height: 100%;
-    padding:0;
-    list-style: none;
-
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-end;
-
-}
-
-nav ul li {
-    
-    font-weight: 700;
-    margin: 0 10px;
-}
-
-.nav-home {
-    font-weight: 700;
-} */
-
-
-
-// *************
 // NAV version 2
 
 .navigation {
     font-size: 1.6rem;
     font-weight: 700;
+
+    @media only screen and (max-width:600px) {
+        display: none;
+    }
+
+
+    & a {
+        text-decoration: none;
+        color: inherit;
+
+        &:hover {
+            color: orangered;
+            transition: all .2s;
+      
+        }
+
+       
+        
+    }
+
+    
 
     &__home {
         margin-left: 4rem;
@@ -131,17 +98,7 @@ nav ul li {
         & li {
             margin: 1rem;
         }
-
-        & a {
-            text-decoration: none;
-            color: inherit;
-    
-            &:hover {
-                color: orangered;
-                transition: all .2s;
-          
-            }
-        }
+        
     }
 
 }
@@ -155,12 +112,14 @@ nav ul li {
 .hero {
     &__image {
         flex:0 0 50%;
-        background: orangered;  
-        background: url(/static/images/hero-image.jpg);
         background-repeat: no-repeat;
         background-size: cover;
 
         clip-path: polygon(0 0, 89% 0, 80% 100%, 0% 100%);   
+        
+        @media only screen and (max-width:600px) {
+            flex: 0 0 40%;
+        }
         
     }
 
@@ -168,6 +127,11 @@ nav ul li {
         flex: 0 0 50%;
         padding: 7rem;
         font-size: 1.6rem;
+
+        @media only screen and (max-width:600px) {
+            flex: 0 0 60%;
+            padding: 4rem;
+        }
 
         & a {
             text-decoration: none;
@@ -201,4 +165,40 @@ nav ul li {
             padding: 0 2rem;
         }
     }
+}
+
+// Mobile Menu
+
+.ham {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    width: 4rem;
+    height: 4rem;
+    border: black solid 1px;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+
+}
+
+.closeIcon {
+    display: none;
+}
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    background: black;
+    color: white;
+    //transform: translateY(-100%);
+    display:none;
+    transition: transform 0.2s;
+    list-style: none;
+    padding-top: 4rem;
 }

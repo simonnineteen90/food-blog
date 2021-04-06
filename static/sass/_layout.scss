@@ -1,12 +1,13 @@
+
+
+
+
 .container {
-max-width: 120rem;
-margin:0 auto;
-background-color: var(--color-light-gray);
-
-min-height: 100vh;
-
+    max-width: 120rem;
+    margin:0 auto;
+    background-color: var(--color-light-gray);
+    min-height: 100vh;
 }
-
 
 
 .navigation {
@@ -20,17 +21,32 @@ min-height: 100vh;
 
 .hero {
     height: 50rem;
-    background-color: var(--color-dark-gray);
+    background-color: var(--color-dark-gray);    
     display: flex;
     justify-content: flex-end;
     background-color: var(--color-white);
-   
-    //mask-image: linear-gradient(90deg rgba(0, 0, 0, 1.0), transparent);
-    
+    background: linear-gradient(90deg, rgba(0,12,23,0) 30%, rgba(228,228,228,1) 55%),
+                url(/static/images/hero-image.jpg);
+    background-size: cover;
 
-    // height: 500px; 
+    @media only screen and (max-width:800px) {
+        height: 70rem;
+        flex-direction: column;
+        background: linear-gradient(180deg, rgba(0,12,23,0) 30%, rgba(228,228,228,1) 55%),
+                url(/static/images/hero-image.jpg);
+        background-size: cover;
+    }
+
+    @media only screen and (max-width:600px) {
+        height: 80vh;
+        flex-direction: column;
+        background: linear-gradient(180deg, rgba(0,12,23,0) 30%, rgba(228,228,228,1) 55%),
+                url(/static/images/hero-image.jpg);
+        background-size: cover;
+    }
 
 }
+
 
 .main-content {
     // height: 100rem;
@@ -49,4 +65,7 @@ min-height: 100vh;
     justify-content: center;
     font-size: 1.4rem;
 }
+
+
+
 
