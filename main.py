@@ -23,6 +23,10 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
+@app.route('/post')
+def post():
+    return render_template('post.html')    
+
 @app.route('/contact', methods=["POST", "GET"])
 def contact():
     if request.method == "POST":

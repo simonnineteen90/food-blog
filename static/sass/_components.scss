@@ -174,9 +174,13 @@ label {
     height: 4rem;
     border: black solid 1px;
     border-radius: 50%;
-    background: white;
+    background: var(--color-white);
     cursor: pointer;
     z-index: 1;
+
+    @media only screen and (min-width:600px) {
+        display: none;
+    }
 
 }
 
@@ -198,22 +202,48 @@ label {
     transition: transform 0.2s;
     list-style: none;
     padding:0;
+    font-weight: 700;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
     
+    & a:hover {
+        color: orangered;
+        transition: all .2s;
+    }
 }
 
 .mob-link {
     text-decoration: none;
-    color: white;
+    color: var(--color-white);
     font-size: 3rem;
        
 }
 
 .show-menu {
     transform: translateY(0);
+}
+
+// posts page
+.post-main {
+
+&__text {
+    flex: 0 1 65%;
+    background-color: orangered;
+    padding: 4rem;
+}
+
+&__images {
+    flex: 0 1 35%;
+    background-color: red;
+    padding: 4rem;
+}
+
+
+
+
+
+
 }
