@@ -91,12 +91,18 @@ body {
 .post-header-image {
   min-height: 50rem;
   background-color: orange;
+  background-size: cover;
 }
 
 .post-main {
   min-height: 90rem;
   display: flex;
   font-size: 1.6rem;
+}
+@media only screen and (max-width: 600px) {
+  .post-main {
+    flex-direction: column;
+  }
 }
 
 .contact-container {
@@ -281,13 +287,19 @@ label {
 
 .post-main__text {
   flex: 0 1 65%;
-  background-color: orangered;
+  background-color: var(--color-white);
   padding: 4rem;
 }
 .post-main__images {
   flex: 0 1 35%;
-  background-color: red;
+  background-color: var(--color-white);
+}
+.post-main__images figure {
+  margin: 0;
   padding: 4rem;
+}
+.post-main__images figure img {
+  width: 100%;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -231,14 +231,23 @@ label {
 
 &__text {
     flex: 0 1 65%;
-    background-color: orangered;
+    background-color: var(--color-white);
     padding: 4rem;
 }
 
 &__images {
     flex: 0 1 35%;
-    background-color: red;
-    padding: 4rem;
+    background-color: var(--color-white);
+
+    & figure {
+        margin:0;
+        padding: 4rem;
+
+        & img {
+            width: 100%;
+        }
+
+    }
 }
 
 

@@ -3,7 +3,7 @@
 <nav class="navigation">
     <span class="navigation__home"><a href="{{ url_for('index') }}">Home</a> </span>
     <ul class="navigation__links">
-        <li> <a href="#">All Posts</a> </li>
+        <li> <a href="{{ url_for('post') }}">Post</a> </li>
         <li> <a href="#">About</a> </li>
         <li> <a href="{{ url_for('contact') }}">Contact</a> </li>
     </ul>
@@ -21,7 +21,7 @@
 
 <ul class="mobile-menu">
     <li><a class="mob-link" href="{{ url_for('index') }}">Home</a></li>
-    <li><a class="mob-link" href="#">All Posts</a></li>
+    <li><a class="mob-link" href="{{ url_for('post') }}">Post</a></li>
     <li><a class="mob-link" href="#">About</a></li>
     <li><a class="mob-link" href="{{ url_for('contact') }}">Contact</a></li>
 </ul>

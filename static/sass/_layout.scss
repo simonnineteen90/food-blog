@@ -70,6 +70,7 @@
 .post-header-image {
     min-height: 50rem;
     background-color: orange;
+    background-size: cover;
 }
 
 
@@ -77,6 +78,10 @@
     min-height: 90rem;
     display: flex;
     font-size: 1.6rem;
+
+    @media only screen and (max-width: 600px) {
+        flex-direction: column;
+    }
     
 
 
