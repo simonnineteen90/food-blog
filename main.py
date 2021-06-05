@@ -64,14 +64,27 @@ def add_post():
             content=request.form["content"],
             ingredients=request.form["ingredients"],
             difficulty=request.form["difficulty"]
-
         )
         db.session.add(new_post)
         db.session.commit()
-        print([new_post.heading, new_post.content,new_post.ingredients,new_post.difficulty])
+        # print([new_post.heading, new_post.content,new_post.ingredients,new_post.difficulty])
         return redirect(url_for('add_post'))
 
-    return render_template('add_post.html')    
+    all_posts = db.session.query(Post).all()
+    return render_template('add_post.html', posts=all_posts) 
+
+# DELETE A POST
+@app.route('/delete_post')
+def delete_post():
+    # this gets the id from the argument passed in the url_for in the html template
+    post_id = request.args.get('id')
+
+    post_to_delete = Post.query.get(post_id)
+    db.session.delete(post_to_delete)
+    db.session.commit()
+    return redirect(url_for('add_post'))
+
+
 
 
 if __name__ == "__main__":
