@@ -84,6 +84,45 @@ def delete_post():
     db.session.commit()
     return redirect(url_for('add_post'))
 
+# EDIT A POST
+@app.route('/edit_post', methods=['POST','GET'])
+def edit_post():
+    # gets the id from the argument in the url_for in html doc
+    post_id = request.args.get('id')
+    post_to_edit = Post.query.get(post_id)
+
+    print(post_id)
+    print(post_to_edit)
+
+
+    ## IF request is POST (when the form is submitted)
+    if request.method == "POST":
+        
+        # get the id of post to be edited
+        id = request.form["id"]
+        print(id)
+        
+        # access the db entry
+        post_to_update = Post.query.get(id)    
+
+        # set the new content for the post
+        # book_to_update.rating = request.form["rating"]
+
+        post_to_update.heading = request.form["heading"]
+        post_to_update.content = request.form["content"]
+        post_to_update.ingredients = request.form["ingredients"]
+        post_to_update.difficulty = request.form["difficulty"]
+
+        # # commit the changes
+        db.session.commit()
+
+        # reuturn a html page
+        return redirect(url_for('add_post'))     
+
+    return render_template('edit_post.html', post=post_to_edit)
+
+        
+
 
 
 
