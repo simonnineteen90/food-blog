@@ -55,6 +55,15 @@ def contact():
     return render_template('contact.html', msg_sent=False)
 
 
+
+## DB ROUTES
+
+# VIEW ALL POSTS
+@app.route('/all_posts')
+def all_posts():
+    all_posts = db.session.query(Post).all()
+    return render_template('all_posts.html', posts=all_posts) 
+
 # ADD NEW POST TO DB
 @app.route('/add_post', methods=['POST', 'GET'])
 def add_post():
@@ -70,8 +79,10 @@ def add_post():
         # print([new_post.heading, new_post.content,new_post.ingredients,new_post.difficulty])
         return redirect(url_for('add_post'))
 
-    all_posts = db.session.query(Post).all()
-    return render_template('add_post.html', posts=all_posts) 
+    # all_posts = db.session.query(Post).all()
+    # return render_template('add_post.html', posts=all_posts) 
+    return render_template('add_post.html') 
+     
 
 # DELETE A POST
 @app.route('/delete_post')
@@ -117,7 +128,7 @@ def edit_post():
         db.session.commit()
 
         # reuturn a html page
-        return redirect(url_for('add_post'))     
+        return redirect(url_for('all_posts'))     
 
     return render_template('edit_post.html', post=post_to_edit)
 
