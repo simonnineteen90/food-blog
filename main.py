@@ -38,7 +38,8 @@ def send_email(name, email, message):
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    all_posts = db.session.query(Post).all()
+    return render_template('index.html', posts=all_posts)
 
 @app.route('/post')
 def post():
@@ -77,7 +78,7 @@ def add_post():
         db.session.add(new_post)
         db.session.commit()
         # print([new_post.heading, new_post.content,new_post.ingredients,new_post.difficulty])
-        return redirect(url_for('add_post'))
+        return redirect(url_for('all_posts'))
 
     # all_posts = db.session.query(Post).all()
     # return render_template('add_post.html', posts=all_posts) 
@@ -93,7 +94,7 @@ def delete_post():
     post_to_delete = Post.query.get(post_id)
     db.session.delete(post_to_delete)
     db.session.commit()
-    return redirect(url_for('add_post'))
+    return redirect(url_for('all_posts'))
 
 # EDIT A POST
 @app.route('/edit_post', methods=['POST','GET'])

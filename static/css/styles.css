@@ -3,6 +3,9 @@
   --color-white: rgb(241, 241, 241);
   --color-light-gray: rgb(165, 164, 164);
   --color-dark-gray: rgb(83, 83, 83);
+  --color-accent-dark: rgb(61, 116, 65);
+  --color-accent-light: rgb(192, 248, 196);
+  --color-neutral: rgb(247, 248, 228);
 }
 
 *,
@@ -18,7 +21,6 @@ html {
   font-weight: 400;
   line-height: 1.6;
   color: var(--color-primary);
-  background-color: var(--color-dark-gray);
   margin: 0;
   padding: 0;
 }
@@ -34,13 +36,14 @@ body {
 .container {
   max-width: 120rem;
   margin: 0 auto;
-  background-color: var(--color-light-gray);
+  background-color: #ecebeb;
   min-height: 100vh;
+  box-shadow: 3px 3px 12px 4px rgba(180, 180, 180, 0.4);
 }
 
 .navigation {
-  min-height: 7rem;
-  background-color: var(--color-light-gray);
+  height: 4rem;
+  background-color: var(--color-neutral);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -48,12 +51,9 @@ body {
 
 .hero {
   height: 50rem;
-  background-color: var(--color-dark-gray);
+  background-color: var(--color-accent-light);
   display: flex;
   justify-content: flex-end;
-  background-color: var(--color-white);
-  background: linear-gradient(90deg, rgba(0, 12, 23, 0) 30%, #e4e4e4 55%), url(/static/images/hero-image.jpg);
-  background-size: cover;
 }
 @media only screen and (max-width: 800px) {
   .hero {
@@ -73,7 +73,7 @@ body {
 }
 
 .main-content {
-  background-color: var(--color-white);
+  background-color: var(--color-neutral);
   display: flex;
   flex-wrap: wrap;
   align-content: space-around;
@@ -82,7 +82,7 @@ body {
 
 .footer {
   min-height: 7rem;
-  background-color: var(--color-light-gray);
+  background-color: var(--color-accent-dark);
   display: flex;
   justify-content: center;
   font-size: 1.4rem;
@@ -155,7 +155,7 @@ label {
 }
 
 .navigation {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: 700;
 }
 @media only screen and (max-width: 600px) {
@@ -186,9 +186,14 @@ label {
 
 .hero__image {
   flex: 0 0 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  clip-path: polygon(0 0, 89% 0, 80% 100%, 0% 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero__image--shape {
+  height: 40rem;
+  width: 40rem;
+  background-color: red;
 }
 @media only screen and (max-width: 600px) {
   .hero__image {
@@ -216,13 +221,11 @@ label {
   flex: 1 1 30rem;
   margin: 4rem;
   height: 40rem;
-  background-color: #FDFDFD;
+  background-color: #f1f1f1;
   font-size: 1.6rem;
 }
 .main-content__card--image {
   height: 18rem;
-  background-color: orangered;
-  background-image: url(/static/images/hero-image.jpg);
 }
 .main-content__card--text {
   padding: 0 2rem;
@@ -300,6 +303,20 @@ label {
 }
 .post-main__images figure img {
   width: 100%;
+}
+
+.form-container {
+  background-color: #FDFDFD;
+  padding: 25px;
+  font-size: 1.6rem;
+}
+
+.post-form {
+  height: 100%;
+  width: 100%;
+  padding: 5rem 10rem;
+  display: flex;
+  flex-direction: column;
 }
 
 /*# sourceMappingURL=styles.css.map */

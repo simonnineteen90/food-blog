@@ -2,17 +2,21 @@
 
 {% block content %} 
 
-<form action="{{ url_for('add_post') }}" method="POST">
-    <label>Heading</label>
-    <input name="heading" type="text" >
-    <label>Content</label>
-    <input type="text" name="content">
-    <label>Ingredients</label>
-    <input type="text" name="ingredients">
-    <label>Difficulty</label>
-    <input type="text" name="difficulty">
-    <button type="submit">Add Post</button>
-</form>
+<main class="form-container">
+    <h1>Add Post</h1>
+    <form class="post-form" action="{{ url_for('add_post') }}" method="POST">
+        <label>Heading</label>
+        <input name="heading" type="text" >
+        <label>Content</label>
+        <input type="textarea" name="content">
+        <label>Ingredients</label>
+        <input type="text" name="ingredients">
+        <label>Difficulty</label>
+        <input type="text" name="difficulty">
+        <button type="submit">Add Post</button>
+    </form>    
+</main>
+
 
 
 {% endblock %}
