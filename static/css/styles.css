@@ -38,7 +38,13 @@ body {
   margin: 0 auto;
   background-color: #ecebeb;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   box-shadow: 3px 3px 12px 4px rgba(180, 180, 180, 0.4);
+}
+
+.wrapper {
+  flex: 1 1 auto;
 }
 
 .navigation {
@@ -229,6 +235,32 @@ label {
 }
 .main-content__card--text {
   padding: 0 2rem;
+}
+
+.all_posts {
+  font-size: 1.6rem;
+}
+.all_posts h1 {
+  margin: 4rem 0 0 4rem;
+}
+.all_posts ul {
+  margin-bottom: 2rem;
+}
+.all_posts li {
+  list-style: none;
+  padding: 0;
+}
+
+.delete {
+  color: red;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.edit {
+  color: blue;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 .ham {

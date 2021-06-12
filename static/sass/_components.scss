@@ -173,6 +173,41 @@ label {
     }
 }
 
+
+//  Editing pages
+
+.all_posts {
+    font-size: 1.6rem;
+
+    & h1 {
+        margin: 4rem 0 0 4rem;
+    }
+
+    & ul {
+        margin-bottom: 2rem;
+    }
+    
+    
+    & li {
+        list-style: none;
+        padding: 0;
+        
+    }
+    
+}
+
+.delete {
+    color: red;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.edit {
+    color: blue;
+    font-weight: bold;
+    text-decoration: none;
+}
+
 // Mobile Menu
 
 .ham {
