@@ -37,11 +37,11 @@ input[type=text] {
     background-color: inherit;
 }
 
-input:focus {
-    outline: none;
-    border-bottom: solid 4px red;
+// input:focus  {
+//     outline: none;
+//     border-bottom: solid 4px var(--color-accent-dark);
    
-}
+// }
 
 button, input, select, textarea, label {
     font-family: inherit;
@@ -298,14 +298,18 @@ label {
 
 .form-container {
     background-color: #FDFDFD;
-    padding: 25px;
+    padding: 5rem 10rem;
     font-size: 1.6rem;
+    flex: 1 1 auto;
 }
 
 .post-form {
     height: 100%;
     width:100%;
-    padding: 5rem 10rem;
     display: flex;
     flex-direction: column;
+
+    & button {
+        margin-top: 5rem;
+    }
 }

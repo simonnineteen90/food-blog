@@ -84,6 +84,7 @@ body {
   flex-wrap: wrap;
   align-content: space-around;
   justify-content: space-around;
+  flex: 1 1 auto;
 }
 
 .footer {
@@ -142,11 +143,6 @@ input[type=text] {
   border: none;
   border-bottom: 1px solid #00171F;
   background-color: inherit;
-}
-
-input:focus {
-  outline: none;
-  border-bottom: solid 4px red;
 }
 
 button, input, select, textarea, label {
@@ -339,16 +335,19 @@ label {
 
 .form-container {
   background-color: #FDFDFD;
-  padding: 25px;
+  padding: 5rem 10rem;
   font-size: 1.6rem;
+  flex: 1 1 auto;
 }
 
 .post-form {
   height: 100%;
   width: 100%;
-  padding: 5rem 10rem;
   display: flex;
   flex-direction: column;
+}
+.post-form button {
+  margin-top: 5rem;
 }
 
 /*# sourceMappingURL=styles.css.map */
