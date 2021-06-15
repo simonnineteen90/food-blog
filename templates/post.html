@@ -8,19 +8,16 @@
 
 <main class=post-main>
     <div class="post-main__text" >
-        <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum perspiciatis voluptate ea?</h1>
+        <h1>{{ post.heading }}</h1>
         
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quia provident voluptatum, non ratione deleniti tenetur! Mollitia qui necessitatibus voluptatum minima, nam, sequi iusto magnam iure maxime soluta ex tempore?
-        Debitis modi aperiam quos illo, distinctio praesentium laborum, sequi magnam sed iusto provident voluptatum quibusdam, vel beatae cum ad. Rem asperiores, eum vel impedit ipsam omnis voluptatibus. Veritatis, animi! </p>
+        <p>{{ post.content }} </p>
         
         <h2>Ingredients</h2>
         <ul>
-            <li>Lorem ipsum dolor sit amet.</li>
-            <li>Lorem ipsum dolor sit amet.</li>
-            <li>Lorem ipsum dolor sit amet.</li>
-            <li>Lorem ipsum dolor sit amet.</li>
-            <li>Lorem ipsum dolor sit amet.</li>
-            <li>Lorem ipsum dolor sit amet.</li>
+
+            {% for item in ingredients %}
+                <li>{{ item }}</li>
+            {% endfor %}    
         </ul>
 
         <h2>Method</h2>

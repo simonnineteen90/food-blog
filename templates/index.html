@@ -35,6 +35,7 @@
         <div class="main-content__card--text">
             <h3>{{post.heading}}</h3>
             <p>{{post.content}} </p>
+            <a href="{{ url_for('post', id=post.id)  }}">Read more</a>
         </div>
     </div>
     {% endfor %}

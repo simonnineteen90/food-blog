@@ -43,7 +43,11 @@ def index():
 
 @app.route('/post')
 def post():
-    return render_template('post.html')    
+    post_id = request.args.get('id')
+    post_to_edit = Post.query.get(post_id)
+    ingredients = post_to_edit.ingredients.split(";")
+    print(ingredients[0])
+    return render_template('post.html', post=post_to_edit, ingredients=ingredients)    
 
 @app.route('/contact', methods=["POST", "GET"])
 def contact():
@@ -132,8 +136,6 @@ def edit_post():
         return redirect(url_for('all_posts'))     
 
     return render_template('edit_post.html', post=post_to_edit)
-
-        
 
 
 
