@@ -12,10 +12,12 @@ db = SQLAlchemy(app)
 # CREATE DB TABLE
 class Post(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    heading = db.Column(db.String(100), nullable=False)
-    content = db.Column(db.String(100), nullable=False)
-    ingredients = db.Column(db.String(100), nullable=False)
+    heading = db.Column(db.String(150), nullable=False)
+    content = db.Column(db.String(250), nullable=False)
+    ingredients = db.Column(db.String(250), nullable=False)
+    method = db.Column(db.String(500), nullable=False)
     difficulty = db.Column(db.Integer, nullable=False)
+    
 
 
 db.create_all()    
@@ -46,8 +48,9 @@ def post():
     post_id = request.args.get('id')
     post_to_edit = Post.query.get(post_id)
     ingredients = post_to_edit.ingredients.split(";")
-    print(ingredients[0])
-    return render_template('post.html', post=post_to_edit, ingredients=ingredients)    
+    method = post_to_edit.method.split(";")
+    
+    return render_template('post.html', post=post_to_edit, ingredients=ingredients, method=method)    
 
 @app.route('/contact', methods=["POST", "GET"])
 def contact():
@@ -77,6 +80,7 @@ def add_post():
             heading=request.form["heading"],
             content=request.form["content"],
             ingredients=request.form["ingredients"],
+            method=request.form["method"],
             difficulty=request.form["difficulty"]
         )
         db.session.add(new_post)
@@ -127,6 +131,7 @@ def edit_post():
         post_to_update.heading = request.form["heading"]
         post_to_update.content = request.form["content"]
         post_to_update.ingredients = request.form["ingredients"]
+        post_to_update.method = request.form["method"]
         post_to_update.difficulty = request.form["difficulty"]
 
         # # commit the changes

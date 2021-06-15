@@ -22,12 +22,9 @@
 
         <h2>Method</h2>
         <ol>
-            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab ducimus accusamus est laboriosam laudantium! Obcaecati.</li>
-            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab ducimus accusamus est laboriosam laudantium! Obcaecati.</li>
-            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab ducimus accusamus est laboriosam laudantium! Obcaecati.</li>
-            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab ducimus accusamus est laboriosam laudantium! Obcaecati.</li>
-            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab ducimus accusamus est laboriosam laudantium! Obcaecati.</li>
-
+            {% for item in method %}
+                <li>{{ item }}</li>
+            {% endfor %}  
         </ol>
 
     </div>
