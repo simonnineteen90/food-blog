@@ -37,11 +37,11 @@ input[type=text] {
     background-color: inherit;
 }
 
-input:focus {
-    outline: none;
-    border-bottom: solid 4px red;
+// input:focus  {
+//     outline: none;
+//     border-bottom: solid 4px var(--color-accent-dark);
    
-}
+// }
 
 button, input, select, textarea, label {
     font-family: inherit;
@@ -61,7 +61,7 @@ label {
 // NAV version 2
 
 .navigation {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 700;
 
     @media only screen and (max-width:600px) {
@@ -109,10 +109,18 @@ label {
 .hero {
     &__image {
         flex:0 0 50%;
-        background-repeat: no-repeat;
-        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
 
-        clip-path: polygon(0 0, 89% 0, 80% 100%, 0% 100%);   
+        &--shape {
+            height:40rem;
+            width: 40rem;
+            background-color: red;
+        }
+        
+        
         
         @media only screen and (max-width:600px) {
             flex: 0 0 40%;
@@ -149,19 +157,55 @@ label {
         margin: 4rem;
         // min-width: 30rem;
         height: 40rem;
-        background-color: #FDFDFD;
+        background-color: #f1f1f1;
         font-size: 1.6rem;
+
         
         &--image {
             height: 18rem;
-            background-color: orangered;
-            background-image: url(/static/images/hero-image.jpg);
+            // background-color: orangered;
+            // background-image: url(/static/images/hero-image.jpg);
         }
 
         &--text {
             padding: 0 2rem;
         }
     }
+}
+
+
+//  Editing pages
+
+.all_posts {
+    font-size: 1.6rem;
+
+    & h1 {
+        margin: 4rem 0 0 4rem;
+    }
+
+    & ul {
+        margin-bottom: 2rem;
+    }
+    
+    
+    & li {
+        list-style: none;
+        padding: 0;
+        
+    }
+    
+}
+
+.delete {
+    color: red;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.edit {
+    color: blue;
+    font-weight: bold;
+    text-decoration: none;
 }
 
 // Mobile Menu
@@ -250,9 +294,22 @@ label {
     }
 }
 
+}
 
+.form-container {
+    background-color: #FDFDFD;
+    padding: 5rem 10rem;
+    font-size: 1.6rem;
+    flex: 1 1 auto;
+}
 
+.post-form {
+    height: 100%;
+    width:100%;
+    display: flex;
+    flex-direction: column;
 
-
-
+    & button {
+        margin-top: 5rem;
+    }
 }

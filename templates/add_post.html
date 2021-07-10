@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %} 
+
+<main class="form-container">
+    <h1>Add Post</h1>
+    <form class="post-form" action="{{ url_for('add_post') }}" method="POST">
+        <label>Heading</label>
+        <input name="heading" type="text" >
+        <label>Content</label>
+        <textarea name="content" cols="30" rows="10"></textarea>
+        <label>Ingredients</label>
+        <textarea name="ingredients" cols="30" rows="3"></textarea>
+        <label>Method</label>
+        <textarea name="method" cols="30" rows="3"></textarea>
+        <label>Difficulty</label>
+        <input type="text" name="difficulty">
+        <button type="submit">Add Post</button>
+    </form>    
+</main>
+
+
+
+{% endblock %}

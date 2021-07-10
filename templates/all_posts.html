@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %} 
+
+
+<container class="wrapper all_posts">
+
+    <h1>All Posts</h1>
+
+    {% for post in posts %}
+        <ul>
+            <li><b>Heading:</b> {{post.heading}}</li>
+            <li><b>Content</b> {{post.content}}</li>
+            <li><b>Ingredients:</b> {{post.ingredients}}</li>
+            <li><b>Difficulty:</b> {{post.difficulty}}</li>
+
+            <li><a class="edit" href="{{url_for('edit_post',id=post.id)}}">Edit</a></li>
+            <li><a class="delete" href="{{url_for('delete_post',id=post.id)}}">Delete</a></li>
+        </ul>
+        
+        <hr>
+    {% endfor %}
+</container>
+
+
+
+
+{% endblock %}

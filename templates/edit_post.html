@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %} 
+
+<!-- Loop over an object by calling the dictionary and .items method3 -->
+<!-- {% for key, value in post.__dict__.items() %}
+    <p>{{ key }}</p>
+    <p>{{ value }}</p>
+    <hr>
+{% endfor %}     -->
+
+<main class="form-container">
+    <h1>Edit Post</h1>
+
+    <form class="post-form" action="{{ url_for('edit_post') }}" method="POST">
+            <label>Heading</label>
+            <input name="heading" type="text" value="{{post.heading}}">
+            
+            <label>Content</label>
+            <input hidden="hidden" name="id" value="{{post.id}}">
+            
+            <textarea name="content" cols="30" rows="10">{{post.content}}</textarea>
+
+            <label>Ingredients</label>
+            <textarea name="ingredients" cols="30" rows="3">{{post.ingredients}}</textarea>
+            
+            <label>Difficulty</label>
+            <input type="text" name="difficulty" value="{{post.difficulty}}">
+            <button type="submit">Update Post</button>
+        </form>
+</main>
+
+
+
+
+
+
+{% endblock %}

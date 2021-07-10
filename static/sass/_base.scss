@@ -5,6 +5,9 @@
     --color-white: rgb(241, 241, 241);
     --color-light-gray: rgb(165, 164, 164);
     --color-dark-gray: rgb(83, 83, 83);
+    --color-accent-dark: rgb(61, 116, 65);
+    --color-accent-light: rgb(192, 248, 196);
+    --color-neutral: rgb(247, 248, 228);
 
 }
 
@@ -24,7 +27,7 @@ html {
     font-weight: 400;
     line-height: 1.6;
     color: var(--color-primary);
-    background-color: var(--color-dark-gray);
+    // background-color: var(--color-dark-gray);
 
     margin:0;
     padding: 0;
