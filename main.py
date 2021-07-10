@@ -131,7 +131,6 @@ def edit_post():
         post_to_update.heading = request.form["heading"]
         post_to_update.content = request.form["content"]
         post_to_update.ingredients = request.form["ingredients"]
-        post_to_update.method = request.form["method"]
         post_to_update.difficulty = request.form["difficulty"]
 
         # # commit the changes
