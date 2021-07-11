@@ -33,9 +33,6 @@ def send_email(name, email, message):
         connection.sendmail(from_addr=my_email, to_addrs=my_email,
                             msg=f"Subject: Contact form \n\n Name: {name} \n Email: {email} \n Message: {message}")
 
-# @app.route('/contact')
-# def contact():
-#     return render_template('index.html')
 
 
 @app.route('/')
