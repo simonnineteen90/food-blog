@@ -1,6 +1,8 @@
 from flask import Flask, render_template, request, redirect, url_for
 import smtplib
 from flask_sqlalchemy import SQLAlchemy
+import os
+
 
 
 
@@ -25,8 +27,8 @@ db.create_all()
 
 # CONTACT FORM EMAIL
 def send_email(name, email, message):
-    my_email = "appdunntest@gmail.com"
-    password = "password goes here"
+    my_email = os.environ.get('FOOD_BLOG_EMAIL')
+    password = os.environ.get('FOOD_BLOG_PW')
     with smtplib.SMTP("smtp.gmail.com") as connection:
         connection.starttls()
         connection.login(user= my_email, password=password)
